@@ -5,7 +5,10 @@ int main(void) {
 
 	int server_fd = iniciar_servidor();
 	log_info(logger, "Servidor listo para recibir al cliente");
+
+	//deja de loggear
 	int cliente_fd = esperar_cliente(server_fd);
+	log_info(logger, "Servidor esperando al cliente");
 
 	t_list* lista;
 	while (1) {
